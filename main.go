@@ -17,7 +17,7 @@ func main() {
 
 	})
 	r.Get("/fun", func(writer http.ResponseWriter, request *http.Request) {
-		writer.Write(byte("just have fun "))
+		writer.Write([]byte("just have fun "))
 	})
 	http.ListenAndServe(":6969", r)
 }
