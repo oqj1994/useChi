@@ -16,5 +16,8 @@ func main() {
 		fmt.Fprint(w, fmt.Sprintf("%d/%d/%d", y, m, d))
 
 	})
+	r.Get("/fun", func(writer http.ResponseWriter, request *http.Request) {
+		writer.Write(byte("just have fun "))
+	})
 	http.ListenAndServe(":6969", r)
 }
